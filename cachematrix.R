@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Both of this functions main purpose is to help calculate Inverse of matrix
+## By saving already-calculated-inverse of matrix in a cache, it helps optimizing calculation time
 
-## Write a short comment describing this function
+## this function creates special type of matrix for calculation where 1-4th objects of output
+## return functions
 
 makeCacheMatrix <- function(x = matrix()) {
                 i <- NULL
@@ -20,7 +21,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function use special matrix(a product from above function)
+## and calculate their inverse
+## if the inverse of this matrix was calculated it returns a cached inverse
+## else new inverse will be calculated
 
 cacheSolve <- function(x, ...) {
         ## Check whether matrix is invertible or not
